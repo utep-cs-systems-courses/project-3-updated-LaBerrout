@@ -2,7 +2,10 @@
 #include <libTimer.h>
 #include "lcdutils.h"
 #include "lcddraw.h"
-
+#include "state_machines.h"
+#include "buzzer.h"
+#include "led.h"
+#include "switches.h"
 
 #define LED_GREEN BIT6             // P1.6
 
@@ -40,6 +43,8 @@ void main()
       
       //drawString5x7(20,20, "hello", fontFgColor, COLOR_BLUE); //prints hello at dif colors
       //draw dif shapes per second
+      drawString8x12(20,20, "hello", fontFgColor, COLOR_BLUE); //TESTING
+
       for(int r=0; r<11; r++){
 	for(int c=0; c<11; c++){
 	  drawPixel(r,c,fontFgColor);
